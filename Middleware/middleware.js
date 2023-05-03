@@ -11,7 +11,7 @@ const auth = (req, res, next) => {
       res.status(500).send({ msg: err.message });
     }
     if (decode) {
-      req.body.autherId = decode.autherId;
+      req.body.authId = decode.authId;
       next();
     } else {
       res.status(500).send({ msg: "Invalid token plaese check" });
